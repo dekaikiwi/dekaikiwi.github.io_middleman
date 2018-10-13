@@ -1,0 +1,16 @@
+---
+title: Jonathan Glassey
+---
+
+<div class='top_menu'>
+  dekaikiwi@github ~ <br/>
+  $ ls blog
+
+  <ul>
+    <% blog_pages = sitemap.resources.select { |f| f.path.include? 'blog/' } %>
+
+    <% blog_pages.each do |b| %>
+      <%= link_to b.data.title, b.path %>
+    <% end %>
+  </ul>
+</div>
