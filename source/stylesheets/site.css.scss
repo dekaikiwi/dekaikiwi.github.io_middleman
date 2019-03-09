@@ -3,7 +3,7 @@ body {
   font-family: "Courier";
   padding: 20px;
   text-align: left;
-  padding: 0 20% 
+  padding: 0 20%
 }
 
 a {
@@ -19,4 +19,14 @@ a {
   ul {
     padding-left: 0
   }
+}
+
+.git_commits {
+  list-style: none;
+}
+
+#footer {
+  font-size: 12px;
+  padding-top: 10px;
+  border-top: 1px solid;
 }

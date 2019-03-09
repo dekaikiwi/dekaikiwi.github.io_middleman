@@ -1,6 +1,8 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+require 'git'
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -15,6 +17,9 @@ page '/*.txt', layout: false
 page '/blog/*', layout: 'layout'
 
 set :md, { :format => :html5 }
+
+config[:root_dir] = File.dirname(__FILE__)
+
 
 # set :markdown_engine, :redcarpet
 
