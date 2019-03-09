@@ -32,6 +32,7 @@ GEM
     fast_blank (1.0.0)
     fastimage (2.1.5)
     ffi (1.10.0)
+    git (1.5.0)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -111,6 +112,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  git
   kramdown
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
