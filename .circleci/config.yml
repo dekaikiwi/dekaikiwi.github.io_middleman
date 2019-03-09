@@ -29,4 +29,4 @@ workflows:
             - build
           filters:
             branches:
-              only: automate-dokku-deploy
+              only: master
