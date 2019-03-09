@@ -139,14 +139,6 @@ This shouldn't be a problem for most CI solutions. I opted for CircleCI as it's 
 ~~~
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.6.1
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - run: bundle install --path vendor/bundle  # install dependencies
-
   deploy:
     machine:
         enabled: true
@@ -160,19 +152,13 @@ jobs:
 
 workflows:
   version: 2
-  build-and-deploy:
+  deploy_middleman:
     jobs:
-      - build:
+      - deploy:
           filters:
             branches:
               only: master
 
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
 ~~~
 
 `DOKKU_GIT_ENDPOINT` should be the entire git URI that you push to for deploys
