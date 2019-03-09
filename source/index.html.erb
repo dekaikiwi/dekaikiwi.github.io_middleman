@@ -3,14 +3,23 @@ title: Jonathan Glassey
 ---
 
 <div class='top_menu'>
-  dekaikiwi@github ~ <br/>
+  jono@dekaikiwi ~ <br/>
   $ ls blog
 
   <ul>
     <% blog_pages = sitemap.resources.select { |f| f.path.include? 'blog/' } %>
 
     <% blog_pages.each do |b| %>
-      <%= link_to b.data.title, b.path %>
+      <%= link_to b.path.gsub('blog/', ''), b.path %>
     <% end %>
+  </ul>
+</div>
+
+<div class='top_menu'>
+  jono@dekaikiwi ~ <br/>
+  $ ls misc
+
+  <ul>
+    <%= link_to 'about.html', '/about.html' %>
   </ul>
 </div>
