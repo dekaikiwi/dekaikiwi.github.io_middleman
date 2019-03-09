@@ -6,7 +6,7 @@ title: Jonathan Glassey
 
 **Jonathan Glassey** is a Software Enginner raised in Christchurch New Zealand, now living in Tokyo Japan.
 
-In addition to his experience in the field of software, Jonathan also has 10+ years of Japanese study and 3+ years of professional Japanese use under his belt.
+In addition to his experience in the field of software, Jonathan also has 10+ years of Japanese study (JLPT N1) and 3+ years of professional Japanese use under his belt.
 
 When he's not fighting for justice in the name of [Shuttlerock Japan](https://shuttlerock.co.jp). You'll often find him doing one of the following.
 
