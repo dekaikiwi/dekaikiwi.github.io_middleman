@@ -7,9 +7,12 @@ jobs:
     steps:
       - checkout
       - run:
+           name: Add DOKKU_SERVER_IP to known_hosts
+           command: ssh-keyscan -H $DOKKU_SERVER_IP >> ~/.ssh/known_hosts
+      - run:
           name: Deploy Master to Dokku
           command: |
-            yes yes | git push $DOKKU_GIT_ENDPOINT master
+            git push $DOKKU_GIT_ENDPOINT master
 
 workflows:
   version: 2
