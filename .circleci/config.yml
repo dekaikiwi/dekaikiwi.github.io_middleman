@@ -1,6 +1,8 @@
 version: 2
 jobs:
   deploy:
+    docker:
+      - image: circleci/ruby:2.6.1
     machine:
         enabled: true
     working_directory: ~/repo
