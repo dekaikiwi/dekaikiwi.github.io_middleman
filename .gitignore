@@ -4,3 +4,4 @@
 .sass-cache
 vendor/bundle
 build
+.talismanrc
