@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Deploy Master to Dokku
           command: |
-            yes | git push $DOKKU_GIT_ENDPOINT master
+            yes yes | git push $DOKKU_GIT_ENDPOINT master
 
 workflows:
   version: 2
