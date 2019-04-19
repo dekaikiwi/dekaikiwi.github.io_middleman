@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-        fingerprints:
-          - "55:03:05:60:a4:2e:5b:04:e6:4e:46:23:45:66:70:bd"
+          fingerprints:
+            - "55:03:05:60:a4:2e:5b:04:e6:4e:46:23:45:66:70:bd"
       - run:
           name: Deploy Master to Dokku
           command: |
