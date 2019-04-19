@@ -16,12 +16,12 @@
     <div id='footer'>
       Latest commit history for this page...
       <ul class='git_commits'>
-        <% g = Git.open(config[:root_dir]) %>
-        <% g.gblob(current_page.source_file).log.to_a.first(5).each do |log| %>
-          <li>
-            <% gh_url = "https://github.com/dekaikiwi/blog_middleman_template/commit/#{log.sha}" %>
-            <%= "#{log.date.strftime("%Y-%m-%d %H:%M:%S")} [#{link_to log.sha[0..6], gh_url}] #{log.message} (#{log.committer.name})" %>
-          </li>
+        <% client = Octokit::Client.new %>
+        <% client.commits('dekaikiwi/blog_middleman_template', nil, path: Pathname.new(current_page.source_file).relative_path_from(config[:root_dir])).each do |item| %>
+        <li>
+          <a href="<%= item.url %>"><%= item.sha[0..7] %></a>
+          <%= item.commit.author.name %> - <%= item.commit.message %> (<%= item.commit.author.date %>)
+        </li>
         <% end %>
       </ul>
     </div>
