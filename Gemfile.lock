@@ -1,12 +1,3 @@
-GIT
-  remote: https://github.com/dekaikiwi/middleman-dokku
-  revision: 9d8e4f8405b14bde0271c3c0ec4815fe868256db
-  branch: bump-dependency-versions
-  specs:
-    middleman-dokku (0.1.0)
-      puma (~> 3.12)
-      rake (~> 12.3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,7 +84,6 @@ GEM
       activesupport (>= 3.1)
     parallel (1.17.0)
     public_suffix (3.0.3)
-    puma (3.12.1)
     rack (2.0.7)
     rake (12.3.2)
     rb-fsevent (0.10.3)
@@ -122,7 +112,6 @@ DEPENDENCIES
   kramdown
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
-  middleman-dokku!
   octokit (~> 4.0)
   tzinfo-data
   wdm (~> 0.1)
