@@ -17,15 +17,15 @@ title: Jonathan Glassey
 
 <div class='top_menu'>
   jono@dekaikiwi ~ <br/>
-  $ cat nuggets/about.txt <br/><br/>
-  Bit's and bobs that I don't think deserve their own blog post. May or may not be useful.<br/><br/>
-  $ ls nuggets
+  $ cat notes/about.txt <br/><br/>
+  Rough documentation of things I find interesting or useful. Probably not as well articulated or written as a blog post<br/><br/>
+  $ ls notes
 
   <ul>
-    <% nuggets = sitemap.resources.select { |f| f.path.include? 'nuggets/' } %>
+    <% notes = sitemap.resources.select { |f| f.path.include? 'notes/' } %>
 
-    <% nuggets.each do |b| %>
-      <%= link_to b.path.gsub('nuggets/', ''), b.path %>
+    <% notes.each do |b| %>
+      <%= link_to b.path.gsub('notes/', ''), b.path %>
     <% end %>
   </ul>
 </div>

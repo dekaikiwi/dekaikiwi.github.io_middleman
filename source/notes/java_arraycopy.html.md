@@ -59,6 +59,6 @@ Which means the `length` field for one of the `arraycopy` calls will be zero, pr
 
 Obvious in hindsight :)
 
-Anyway this nugget is more of less just an exercise to help try and plant the behavior of the `System.arraycopy` method in my head.
+Anyway this note is more of less just an exercise to help try and plant the behavior of the `System.arraycopy` method in my head.
 
 There's quite a bit going on in the parameter list, so seems quite easy to forget :/ Seems like the sort of method that needs a googling every time it gets used!
