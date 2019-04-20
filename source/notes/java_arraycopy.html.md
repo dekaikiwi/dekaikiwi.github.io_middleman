@@ -13,9 +13,9 @@ In cases we need to make some change to an array without altering the initial st
 
 From: [TutorialPoint](https://www.tutorialspoint.com/java/lang/system_arraycopy.htm)
 
-```
+~~~
 public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
-```
+~~~
 
 Now each parameter in my own words...
 
@@ -29,16 +29,16 @@ length - The length of data that will be copied from srcPos to destPos + (length
 
 I was reviewing code a merge sort implementation I wrote [here](https://gist.github.com/dekaikiwi/35112679b5ccd4209bd3c75c9b5de88b) previously and noticed that when merging sorted arrays I had the following snippet at the end.
 
-```
+~~~
 System.arraycopy(numbers, leftIndex, temp, insertIndex, leftEnd - leftIndex + 1);
 System.arraycopy(numbers, rightIndex, temp, insertIndex, rightEnd - rightIndex + 1);
-```
+~~~
 
 In this case insertIndex was set to the same value, which would in theory result in data from the first arraycopy being overwritten.
 
 But upon viewing the while loop that comes before this snippet
 
-```
+~~~
 while (leftIndex <= leftEnd && rightIndex <= rightEnd) {
   leftNum = numbers[leftIndex];
   rightNum = numbers[rightIndex];
@@ -53,7 +53,7 @@ while (leftIndex <= leftEnd && rightIndex <= rightEnd) {
 
   insertIndex += 1;
 }
-```
+~~~
 
 Which means the `length` field for one of the `arraycopy` calls will be zero, preventing any data from being overwritten.
 
