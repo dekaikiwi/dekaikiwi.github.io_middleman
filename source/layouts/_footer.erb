@@ -1,0 +1,12 @@
+<div id='footer'>
+  Latest commit history for this page...
+  <ul class='git_commits'>
+    <% client = Octokit::Client.new %>
+    <% client.commits('dekaikiwi/blog_middleman_template', nil, path: Pathname.new(current_page.source_file).relative_path_from(config[:root_dir])).each do |item| %>
+    <li>
+      <a href="<%= item.html_url %>"><%= item.sha[0..7] %></a>
+      <%= item.commit.author.name %> - <%= item.commit.message %> (<%= item.commit.author.date %>)
+    </li>
+    <% end %>
+  </ul>
+</div>

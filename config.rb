@@ -13,6 +13,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/blog/*', layout: 'layout'
+page '/notes/*', layout: 'notes'
 
 set :md, { :format => :html5 }
 
