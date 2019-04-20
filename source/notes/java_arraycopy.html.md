@@ -5,7 +5,7 @@ date: 1555767266
 
 # Java's System.arraycopy
 
-The below may seem simple to someone has used Java regularly for years, however I'm jumping back in after year or two in the Ruby-sphere and trying to blow the cobwebs out with a few coding challenges on [HackerRank](https://www.hackerrank.com/)
+The below may seem simple to someone has used Java regularly for years, however I'm jumping back in after a few years in the Ruby-sphere and trying to blow the cobwebs out with a few coding challenges on [HackerRank](https://www.hackerrank.com/)
 
 Because Java passes references to the arrays around between methods, we can't alter arrays the context of a method without interfering with the state of the array in other methods.
 
