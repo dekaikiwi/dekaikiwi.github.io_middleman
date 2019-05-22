@@ -3,38 +3,28 @@ title: Jonathan Glassey
 ---
 
 <div class='top_menu'>
-  jono@dekaikiwi ~ <br/>
-  $ ls blog
-
-  <ul>
+  <p> Blog Posts </p>
+  <p>> Lengthy posts about a single topic. </p>
     <% blog_pages = sitemap.resources.select { |f| f.path.include? 'blog/' } %>
 
     <% blog_pages.each do |b| %>
-      <%= link_to b.path.gsub('blog/', ''), b.path %>
+      <%= link_to b.data&.title, b.path %>
     <% end %>
-  </ul>
 </div>
 
 <div class='top_menu'>
-  jono@dekaikiwi ~ <br/>
-  $ cat notes/about.txt <br/><br/>
-  My raw interpretations and impressions, may not be as well written or fact-checked as a blog post.<br/><br/>
-  $ ls notes
+  <p> Notes </p>
+  > My raw interpretations and impressions, may not be as well written or fact-checked as a blog post.<br/><br/>
 
-  <ul>
     <% notes = sitemap.resources.select { |f| f.path.include? 'notes/' } %>
 
     <% notes.each do |b| %>
-      <%= link_to b.path.gsub('notes/', ''), b.path %>
+      <%= link_to b.data&.title, b.path %>
     <% end %>
-  </ul>
 </div>
 
 <div class='top_menu'>
-  jono@dekaikiwi ~ <br/>
-  $ ls misc
-
-  <ul>
-    <%= link_to 'about.html', '/about.html' %>
-  </ul>
+  <p>Various Other Things</p>
+    <%= link_to 'About', '/about.html' %>
+    <%= link_to 'Project Ideas', '/ideas.html' %>
 </div>
