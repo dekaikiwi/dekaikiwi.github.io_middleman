@@ -1,6 +1,6 @@
 ---
 title: Useful grep options
-date:1588695397
+date: 1588695397
 ---
 # grep
 
