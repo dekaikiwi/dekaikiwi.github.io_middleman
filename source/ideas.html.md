@@ -7,7 +7,7 @@ A list of projects that I'd love to get to one day. Feel free to take what you w
 A dice reader that uses a camera to read the numbers off of rolled dice and displays the total number.
 
 - Use some OCR package/API
-- Identify the type of dice in current frame. (Machine Learning??)
+- Identify the type of dice (d6, d20 etc) in current frame. 
 
 ### IOU Bot
 
